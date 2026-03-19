@@ -2,7 +2,6 @@
 
 
 
-##  Project Overview
 
 **Pets Zone** is a modern **MERN Stack (MongoDB, Express.js, React.js, Node.js)** based e-commerce web application designed for pet lovers and livestock traders.
 
