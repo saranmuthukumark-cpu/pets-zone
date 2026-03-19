@@ -7,7 +7,7 @@
 
 The platform enables users to **buy and sell pets, livestock, and pet-related products** with a **multi-role authentication system**.
 
-Each user (**Admin, Vendor, Client**) logs in and accesses a **separate dashboard** based on their role.
+Each user (**Admin, Vendor, Client**) login and accesses a **separate dashboard** based on their role.
 
 ---
 
