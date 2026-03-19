@@ -11,29 +11,29 @@ Each user (**Admin, Vendor, Client**) login and accesses a **separate dashboard*
 
 ## Problem Statement
 
-*No dedicated platform for pets, livestock, and accessories together
+* No dedicated platform for pets, livestock, and accessories together
 
-*Difficulty in finding trusted and verified sellers
+* Difficulty in finding trusted and verified sellers
 
-*Lack of proper animal details (price, age, breed, health)
+* Lack of proper animal details (price, age, breed, health)
 
-*No location-based system for nearby livestock discovery
+* No location-based system for nearby livestock discovery
 
-*No proper system for vendors to manage listings
+* No proper system for vendors to manage listings
 
 
 
 ## Objective
 
-*Connects buyers and sellers directly
+* Connects buyers and sellers directly
 
-*Provides detailed and structured animal listings
+* Provides detailed and structured animal listings
 
-*Supports both online shopping and direct seller interaction
+* Supports both online shopping and direct seller interaction
 
-*Enables location-based search
+* Enables location-based search
 
-Integrates pets, livestock, and accessories in one place
+* Integrates pets, livestock, and accessories in one place
 
 
 ##  User Roles & Features
