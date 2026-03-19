@@ -72,7 +72,7 @@ Each user (**Admin, Vendor, Client**) login and accesses a **separate dashboard*
     
 * Purchase:
 
-  * Small pets & accessories via cart system
+  * Small pets & accessories in cart system
     
 * Shopping flow:
 
