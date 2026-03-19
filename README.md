@@ -13,7 +13,7 @@ Each user (**Admin, Vendor, Client**) logs in and accesses a **separate dashboar
 
 ##  User Roles & Features
 
-### 🛠️ 1. Admin (Control Panel)
+### 1. Admin (Control Panel)
 
 #### Features:
 
@@ -31,7 +31,7 @@ Each user (**Admin, Vendor, Client**) logs in and accesses a **separate dashboar
 
 ---
 
-### 🏪 2. Vendor (Seller Dashboard)
+### 2. Vendor (Seller Dashboard)
 
 #### Features:
 
@@ -54,7 +54,7 @@ Each user (**Admin, Vendor, Client**) logs in and accesses a **separate dashboar
 
 ---
 
-### 🛒 3. Client (Buyer)
+### 3. Client (Buyer)
 
 #### Features:
 
