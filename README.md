@@ -15,7 +15,7 @@ Each user (**Admin, Vendor, Client**) login and accesses a **separate dashboard*
 
 #### Features:
 
-* Secure login with admin role
+* login with admin role
 * Manage all users (block/unblock vendors & clients)
 * Full CRUD operations:
   
