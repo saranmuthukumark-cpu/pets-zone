@@ -48,7 +48,7 @@ Each user (**Admin, Vendor, Client**) login and accesses a **separate dashboard*
   * Location
   * Description
 * Manage listings (Edit/Delete)
-* View buyer inquiries / contact requests
+  
 * Track sales and orders
 
 ---
