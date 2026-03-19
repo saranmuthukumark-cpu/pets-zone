@@ -88,6 +88,3 @@ Each user (**Admin, Vendor, Client**) logs in and accesses a **separate dashboar
 
 *Connecting pet lovers and sellers on one powerful platform*
 
-
-
-Save delivery address
