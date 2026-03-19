@@ -23,6 +23,7 @@ Each user (**Admin, Vendor, Client**) logs in and accesses a **separate dashboar
   
   * Add / Update / Delete pets & livestock
   * Manage veterinary services
+  * Managing pets gromming and pets training 
   * Manage accessories (food, cages, dress, toys)
     
 * Approve or reject vendor listings
