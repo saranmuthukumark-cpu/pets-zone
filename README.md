@@ -1,9 +1,9 @@
-## PETS ZONE - Pets & Livestock E-Commerce Platform (MERN Stack)
+## PETSKART - Pets & Livestock E-Commerce Platform (MERN Stack)
 
 
 
 
-**Pets Zone** is a modern **MERN Stack (MongoDB, Express.js, React.js, Node.js)** based e-commerce web application designed for pet lovers and livestock traders.
+**Petskart** is a modern **MERN Stack (MongoDB, Express.js, React.js, Node.js)** based e-commerce web application designed for pet lovers and livestock traders.
 
 The platform enables users to **buy and sell pets, livestock, and pet-related products** with a **multi-role authentication system**.
 
