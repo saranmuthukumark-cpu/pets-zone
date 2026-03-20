@@ -64,7 +64,7 @@ Each user (**Admin, Vendor, Client**) login and accesses a **separate dashboard*
 * Register/Login as vendor
 * Create listings for:
 
-  * Pets (dog, cat, bird)
+  * Pets (dog, cat, bird) for money or free.
   * Livestock (cow, buffalo, goat, etc.)
     
 * Upload listing details:
