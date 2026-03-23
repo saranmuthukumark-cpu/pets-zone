@@ -10,7 +10,7 @@ Complete a full MERN stack **Pets & Livestock E-Commerce Platform** in 25 days.
 
 ### Day 1
 
-* [ ] Finalize features & pages
+* [x] Finalize features & pages
 * [ ] Setup project structure (client/server)
 * [ ] Initialize GitHub repo
 
