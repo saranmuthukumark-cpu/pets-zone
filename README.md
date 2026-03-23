@@ -144,7 +144,7 @@ This project addresses major limitations found in existing platforms by providin
 ##  Documentation
 
 
-- [Presentation](./petkart ppt.pdf)
+- [Presentation](petskart-ppt.pdf)
 
 ---
 
