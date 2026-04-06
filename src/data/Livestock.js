@@ -1,0 +1,146 @@
+export const live = [
+  {
+    id: 1,
+    animal: "Cow",
+    breed: "Gir",
+    age: 4,
+    price_inr: 65000,
+    location: { village: "Erode", district: "Erode", state: "Tamil Nadu" },
+    owner: {
+      name: "Ramesh Kumar",
+      phone: "9876543210",
+      email: "ramesh@gmail.com",
+    },
+    image:
+      "https://i.pinimg.com/736x/7d/cb/07/7dcb07ea6c810e537faf41bcdc2b8d54.jpg",
+    details: "Healthy dairy cow with good milk yield.",
+  },
+  {
+    id: 2,
+    animal: "Buffalo",
+    breed: "Murrah",
+    age: 5,
+    price_inr: 90000,
+    location: {
+      village: "Namakkal",
+      district: "Namakkal",
+      state: "Tamil Nadu",
+    },
+    owner: { name: "Selvam", phone: "9123456780", email: "selvam@gmail.com" },
+    image:
+      "https://i.pinimg.com/736x/09/5d/d3/095dd35b44de0aaec37838b4a208cc0b.jpg",
+    details: "High fat milk producing buffalo.",
+  },
+  {
+    id: 3,
+    animal: "Goat",
+    breed: "Boer",
+    age: 2,
+    price_inr: 15000,
+    location: { village: "Salem", district: "Salem", state: "Tamil Nadu" },
+    owner: { name: "Karthik", phone: "9012345678", email: "karthik@gmail.com" },
+    image:
+      "https://i.pinimg.com/736x/d2/05/5b/d2055b284493daec0724ac2fb040737b.jpg",
+    details: "Fast-growing meat goat.",
+  },
+  {
+    id: 4,
+    animal: "Pig",
+    breed: "Large White Yorkshire",
+    age: 3,
+    price_inr: 20000,
+    location: {
+      village: "Coimbatore",
+      district: "Coimbatore",
+      state: "Tamil Nadu",
+    },
+    owner: { name: "Arun", phone: "9345678901", email: "arun@gmail.com" },
+    image:
+      "https://i.pinimg.com/736x/87/a8/17/87a8173cf09285db4a8e21cf283b42c7.jpg",
+    details: "Ideal for commercial meat production.",
+  },
+  {
+    id: 5,
+    animal: "Cow",
+    breed: "Sahiwal",
+    age: 4,
+    price_inr: 70000,
+    location: { village: "Karur", district: "Karur", state: "Tamil Nadu" },
+    owner: { name: "Mani", phone: "9789012345", email: "mani@gmail.com" },
+    image:
+      "https://i.pinimg.com/736x/4e/fb/c4/4efbc4d5a3e3f88bbeca3a079a021705.jpg",
+    details: "High milk yield and disease resistant.",
+  },
+  {
+    id: 6,
+    animal: "Buffalo",
+    breed: "Surti",
+    age: 5,
+    price_inr: 85000,
+    location: { village: "Madurai", district: "Madurai", state: "Tamil Nadu" },
+    owner: { name: "Ravi", phone: "9654321780", email: "ravi@gmail.com" },
+    image:
+      "https://i.pinimg.com/1200x/35/41/8f/35418fb50fdc04a7e696cab5d45d66c7.jpg",
+    details: "Good milk producer with calm nature.",
+  },
+  {
+    id: 7,
+    animal: "Goat",
+    breed: "Black Bengal",
+    age: 1,
+    price_inr: 12000,
+    location: {
+      village: "Tirunelveli",
+      district: "Tirunelveli",
+      state: "Tamil Nadu",
+    },
+    owner: { name: "Suresh", phone: "9871234560", email: "suresh@gmail.com" },
+    image:
+      "https://i.pinimg.com/1200x/53/62/63/536263547ff4c5135ce399df8d5bc2e1.jpg",
+    details: "Best for meat quality.",
+  },
+  {
+    id: 8,
+    animal: "Pig",
+    breed: "Landrace",
+    age: 3,
+    price_inr: 22000,
+    location: {
+      village: "Trichy",
+      district: "Tiruchirappalli",
+      state: "Tamil Nadu",
+    },
+    owner: { name: "Dinesh", phone: "9098765432", email: "dinesh@gmail.com" },
+    image:
+      "https://i.pinimg.com/736x/ff/00/9d/ff009da6855d0450beff4120bbb645a1.jpg",
+    details: "Fast growth and high meat yield.",
+  },
+  {
+    id: 9,
+    animal: "Cow",
+    breed: "Red Sindhi",
+    age: 4,
+    price_inr: 60000,
+    location: {
+      village: "Dharmapuri",
+      district: "Dharmapuri",
+      state: "Tamil Nadu",
+    },
+    owner: { name: "Prakash", phone: "9123987654", email: "prakash@gmail.com" },
+    image:
+      "https://i.pinimg.com/736x/4e/fb/c4/4efbc4d5a3e3f88bbeca3a079a021705.jpg",
+    details: "Strong and adaptable dairy cow.",
+  },
+  {
+    id: 10,
+    animal: "Goat",
+    breed: "Sirohi",
+    age: 2,
+    price_inr: 14000,
+    location: { village: "Vellore", district: "Vellore", state: "Tamil Nadu" },
+    owner: { name: "Muthu", phone: "9012987654", email: "muthu@gmail.com" },
+    image:
+      "https://i.pinimg.com/736x/d2/05/5b/d2055b284493daec0724ac2fb040737b.jpg",
+    details: "Suitable for both milk and meat.",
+  },
+];
