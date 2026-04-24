@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const proxyUrl = process.env.NEXT_PUBLIC_BACKEND_URL
 const nextConfig = {
   images: {
     remotePatterns: [
@@ -28,12 +29,12 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/api/:path*",
-        destination: "http://localhost:5000/:path*",
+        source: `${proxyUrl}/api/:path*`,
+        destination: "/:path*",
       },
       {
         source: "/uploads/:path*",
-        destination: "http://localhost:5000/uploads/:path*",
+        destination: `${proxyUrl}/uploads/:path*`,
       },
     ];
   },
