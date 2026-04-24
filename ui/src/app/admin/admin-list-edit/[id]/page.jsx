@@ -114,7 +114,7 @@ export default function AdminEditDashboard() {
       }
 
       const response = await fetch(
-        `http://localhost:5000/adminlist/${categoryType}/${id}`
+        `/api/adminlist/${categoryType}/${id}`
         ,
         {
           method: "PUT",

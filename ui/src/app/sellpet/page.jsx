@@ -29,7 +29,7 @@ export default function SellPetPage() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/adminlist/${category}`,
+        `/api/adminlist/${category}`,
         {
           method: "POST",
           body: formData,

@@ -11,7 +11,7 @@ export default function AdminDashboard() {
 
   useEffect(() => {
     const getUser = async () => {
-      const respone = await fetch("http://localhost:5000/users", {
+      const respone = await fetch("/api/users", {
         method: "GET",
         credentials: "include",
       });

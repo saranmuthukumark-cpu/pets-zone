@@ -11,7 +11,7 @@ export const LivestockProvider = ({ children }) => {
     useEffect(() => {
         const getLivestocks = async () => {
             try {
-                const response = await fetch("http://localhost:5000/livestocks");
+                const response = await fetch("/api/livestocks");
                 const result = await response.json();
                 setLivestocks(result.data);
             } catch (error) {

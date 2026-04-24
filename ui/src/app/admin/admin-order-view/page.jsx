@@ -18,7 +18,7 @@ function OrderDetails() {
 
   useEffect(() => {
     if (id) {
-      fetch(`http://localhost:5000/orders/${id}`)
+      fetch(`/api/orders/${id}`)
         .then((res) => res.json())
         .then((data) => {
           setOrder(data);

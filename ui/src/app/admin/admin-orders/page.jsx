@@ -10,7 +10,7 @@ export default function AdminOrders() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await fetch("http://localhost:5000/orders");
+        const response = await fetch("/api/orders");
         const result = await response.json();
         setDbOrders(result);
       } catch (error) {
@@ -29,7 +29,7 @@ export default function AdminOrders() {
     const newStatus = currentStatus === "Completed" ? "Pending" : "Completed";
     try {
       const response = await fetch(
-        `http://localhost:5000/orders/${id}/status`,
+        `/api/orders/${id}/status`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

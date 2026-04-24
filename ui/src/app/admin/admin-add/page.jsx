@@ -26,7 +26,7 @@ export default function AdminDashboard() {
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/adminlist/${category}`, {
+      const response = await fetch(`/api/adminlist/${category}`, {
         method: "POST",
         body: formData,
         credentials: "include",

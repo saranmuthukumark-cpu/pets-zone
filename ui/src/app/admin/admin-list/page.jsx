@@ -27,7 +27,7 @@ export default function AdminListings() {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const response = await fetch("http://localhost:5000/users", {
+        const response = await fetch("/api/users", {
           method: "GET",
           credentials: "include",
         });
@@ -60,7 +60,7 @@ export default function AdminListings() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/adminlist/${categoryType}/${id}`
+        `/api/adminlist/${categoryType}/${id}`
         ,
         {
           method: "DELETE",
@@ -94,7 +94,7 @@ export default function AdminListings() {
     e.preventDefault();
     try {
       const response = await fetch(
-        `http://localhost:5000/${newItem.categoryType}`,
+        `/api/${newItem.categoryType}`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

@@ -16,7 +16,7 @@ export default function AdminDashboard() {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const response = await fetch("http://localhost:5000/users", {
+        const response = await fetch("/api/users", {
           method: "GET",
           credentials: "include",
         });
@@ -39,7 +39,7 @@ export default function AdminDashboard() {
     if (!window.confirm("want to delete?")) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/users/${userId}`, {
+      const response = await fetch(`/api/users/${userId}`, {
         method: "DELETE",
         credentials: "include",
       });

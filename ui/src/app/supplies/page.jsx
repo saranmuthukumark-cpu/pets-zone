@@ -32,7 +32,7 @@ export default function PetSuppliesPage() {
 
   function getImageSrc(img) {
     if (!img) return "";
-    if (img.startsWith("/uploads/")) return `http://localhost:5000${img}`;
+    if (img.startsWith("/uploads/")) return `/api${img}`;
     return img;
   }
 

@@ -30,7 +30,7 @@ export default function AdminDashboard() {
 
   useEffect(() => {
     const getUser = async () => {
-      const respone = await fetch("http://localhost:5000/users", {
+      const respone = await fetch("/api/users", {
         method: "GET",
         credentials: "include",
       });
@@ -43,7 +43,7 @@ export default function AdminDashboard() {
   useEffect(() => {
     const getOrders = async () => {
       try {
-        const response = await fetch("http://localhost:5000/orders");
+        const response = await fetch("/api/orders");
         const result = await response.json();
         setOrders(result);
       } catch (error) {

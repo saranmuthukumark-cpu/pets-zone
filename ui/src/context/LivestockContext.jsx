@@ -17,7 +17,7 @@ export const LivestockProvider = ({ children }) => {
   useEffect(() => {
     const getPets = async () => {
       try {
-        const response = await fetch("http://localhost:5000/pets");
+        const response = await fetch("/api/pets");
         const result = await response.json();
         setPets(result.data);
       } catch (error) {
@@ -33,7 +33,7 @@ export const LivestockProvider = ({ children }) => {
   useEffect(() => {
     const getLivestocks = async () => {
       try {
-        const response = await fetch("http://localhost:5000/livestocks");
+        const response = await fetch("/api/livestocks");
         const result = await response.json();
         setLivestocks(result.data);
       } catch (error) {
@@ -49,7 +49,7 @@ export const LivestockProvider = ({ children }) => {
   useEffect(() => {
     const getPharmacy = async () => {
       try {
-        const response = await fetch("http://localhost:5000/pharmacy");
+        const response = await fetch("/api/pharmacy");
         const result = await response.json();
         setPharmacy(result.data);
       } catch (error) {
@@ -65,7 +65,7 @@ export const LivestockProvider = ({ children }) => {
   useEffect(() => {
     const getSupplies = async () => {
       try {
-        const response = await fetch("http://localhost:5000/supplies");
+        const response = await fetch("/api/supplies");
         const result = await response.json();
         setSupplies(result.data);
       } catch (error) {
@@ -81,7 +81,7 @@ export const LivestockProvider = ({ children }) => {
   useEffect(() => {
     const getVeterinary = async () => {
       try {
-        const response = await fetch("http://localhost:5000/veterinary");
+        const response = await fetch("/api/veterinary");
         const result = await response.json();
         setVeterinary(result.data);
       } catch (error) {

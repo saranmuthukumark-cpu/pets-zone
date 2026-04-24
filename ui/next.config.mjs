@@ -26,16 +26,18 @@ const nextConfig = {
     ],
   },
   async rewrites() {
-    return [
-      {
-        source: "/api/:path*",
-        destination: `${proxyUrl}/:path*`,
-      },
-      {
-        source: "/uploads/:path*",
-        destination: `${proxyUrl}/uploads/:path*`,
-      },
-    ];
+    return {
+      afterFiles: [
+        {
+          source: "/api/:path*",
+          destination: `${proxyUrl}/:path*`,
+        },
+        {
+          source: "/uploads/:path*",
+          destination: `${proxyUrl}/uploads/:path*`,
+        },
+      ],
+    };
   },
 };
 
