@@ -29,12 +29,12 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: `${proxyUrl}/api/:path*`,
+        source: `/${proxyUrl}/api/:path*`,
         destination: "/:path*",
       },
       {
         source: "/uploads/:path*",
-        destination: `${proxyUrl}/uploads/:path*`,
+        destination: `/${proxyUrl}/uploads/:path*`,
       },
     ];
   },
