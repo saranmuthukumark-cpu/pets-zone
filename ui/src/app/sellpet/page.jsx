@@ -3,6 +3,7 @@
 import { Upload } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 export default function SellPetPage() {
   const [image, setImage] = useState(null);
@@ -14,6 +15,20 @@ export default function SellPetPage() {
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
     if (file) {
+      // max 5mb
+      if (file.size > 5 * 1024 * 1024) {
+        toast.error("Image size more than 5MB");
+        e.target.value = "";
+        return;
+      }
+
+      // validate
+      if (!["image/jpeg", "image/png", "image/webp"].includes(file.type)) {
+        toast.error("Only JPG, PNG, and WEBP images only");
+        e.target.value = "";
+        return;
+      }
+
       setImage(URL.createObjectURL(file));
       setImageFile(file);
     }
@@ -28,14 +43,11 @@ export default function SellPetPage() {
     }
 
     try {
-      const response = await fetch(
-        `/api/adminlist/${category}`,
-        {
-          method: "POST",
-          body: formData,
-          credentials: "include",
-        },
-      );
+      const response = await fetch(`/api/adminlist/${category}`, {
+        method: "POST",
+        body: formData,
+        credentials: "include",
+      });
 
       if (response.ok) {
         alert("It has Added");
@@ -112,7 +124,7 @@ export default function SellPetPage() {
               <input
                 type="text"
                 name="location"
-                placeholder="e.g. Chennai"
+                placeholder="e.g. Erode"
                 className="w-full p-3 border rounded-lg outline-0"
                 required
               />
@@ -157,7 +169,7 @@ export default function SellPetPage() {
               <input
                 type="text"
                 name="animal"
-                placeholder="e.g. Cow, Goat, Pig"
+                placeholder="e.g. Cow, Goat"
                 className="w-full p-3 border rounded-lg outline-0"
                 required
               />
@@ -238,9 +250,15 @@ export default function SellPetPage() {
               <input
                 type="tel"
                 name="owner.phone"
-                placeholder="e.g. 9876543210"
+                placeholder="e.g. 6379745455"
                 className="w-full p-3 border rounded-lg outline-0"
+                pattern="[0-9]{10}"
+                maxLength="10"
+                title="Please enter a valid 10-digit phone number"
                 required
+                onInput={(e) =>
+                  (e.target.value = e.target.value.replace(/[^0-9]/g, ""))
+                }
               />
             </div>
             <div>
@@ -248,7 +266,7 @@ export default function SellPetPage() {
               <input
                 type="email"
                 name="owner.email"
-                placeholder="e.g. ramesh@gmail.com"
+                placeholder="e.g. saran@gmail.com"
                 className="w-full p-3 border rounded-lg outline-0"
                 required
               />
@@ -325,7 +343,7 @@ export default function SellPetPage() {
               <input
                 type="text"
                 name="location"
-                placeholder="e.g. Chennai"
+                placeholder="e.g. Erode"
                 className="w-full p-3 border rounded-lg outline-0"
                 required
               />
@@ -350,7 +368,7 @@ export default function SellPetPage() {
               <input
                 type="text"
                 name="name"
-                placeholder="e.g. Premium Dog Food"
+                placeholder="e.g.Dog Food Name"
                 className="w-full p-3 border rounded-lg outline-0"
                 required
               />
@@ -414,7 +432,7 @@ export default function SellPetPage() {
               <input
                 type="text"
                 name="location"
-                placeholder="e.g. Chennai"
+                placeholder="e.g. Erode"
                 className="w-full p-3 border rounded-lg outline-0"
                 required
               />
@@ -439,7 +457,7 @@ export default function SellPetPage() {
               <input
                 type="text"
                 name="name"
-                placeholder="e.g. Dr. Ramesh Kumar"
+                placeholder="e.g. Dr. Saran"
                 className="w-full p-3 border rounded-lg outline-0"
                 required
               />
@@ -449,7 +467,7 @@ export default function SellPetPage() {
               <input
                 type="text"
                 name="specialization"
-                placeholder="e.g. Large Animals"
+                placeholder="e.g. Bones"
                 className="w-full p-3 border rounded-lg outline-0"
                 required
               />
@@ -469,7 +487,7 @@ export default function SellPetPage() {
               <input
                 type="text"
                 name="location"
-                placeholder="e.g. Chennai"
+                placeholder="e.g. Erode"
                 className="w-full p-3 border rounded-lg outline-0"
                 required
               />
@@ -479,7 +497,7 @@ export default function SellPetPage() {
               <input
                 type="text"
                 name="clinic"
-                placeholder="e.g. RK Veterinary Clinic"
+                placeholder="e.g. Saran Clinic"
                 className="w-full p-3 border rounded-lg outline-0"
                 required
               />
@@ -489,9 +507,15 @@ export default function SellPetPage() {
               <input
                 type="tel"
                 name="phone"
-                placeholder="e.g. 9876543210"
+                placeholder="e.g. 6379745455"
                 className="w-full p-3 border rounded-lg outline-0"
+                pattern="[0-9]{10}"
+                maxLength="10"
+                title="Please enter a valid 10-digit phone number"
                 required
+                onInput={(e) =>
+                  (e.target.value = e.target.value.replace(/[^0-9]/g, ""))
+                }
               />
             </div>
             <div>
@@ -499,7 +523,7 @@ export default function SellPetPage() {
               <input
                 type="email"
                 name="email"
-                placeholder="e.g. rameshvet@gmail.com"
+                placeholder="e.g. saran@gmail.com"
                 className="w-full p-3 border rounded-lg outline-0"
                 required
               />

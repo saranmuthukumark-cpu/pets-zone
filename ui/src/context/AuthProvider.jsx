@@ -3,6 +3,8 @@
 import { useRouter } from "next/navigation";
 import { AuthContext } from "./AuthContext";
 import { useCallback, useEffect, useState } from "react";
+import toast from "react-hot-toast";
+
 
 export default function AuthProvider({ children }) {
   const router = useRouter();
@@ -39,7 +41,7 @@ export default function AuthProvider({ children }) {
     })();
   }, [refreshSession]);
 
-  // login and logout functions
+  // login and logout 
   const login = async () => {
     const me = await refreshSession();
     if (me) {
@@ -60,7 +62,9 @@ export default function AuthProvider({ children }) {
         },
         credentials: "include",
       });
+      toast.success("logged out successfully");
     } catch (error) {
+      toast.error("Failed to log out");
       console.error("Error logging out:", error);
     }
 

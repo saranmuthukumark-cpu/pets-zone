@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 
 import AuthProvider from "@/context/AuthProvider";
 import { LivestockProvider } from "@/context/LivestockContext";
+import { Toaster } from "react-hot-toast";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -24,7 +25,7 @@ export default function RootLayout({ children }) {
         <AuthProvider>
           <LivestockProvider>
             <Navbar />
-
+            <Toaster />
             {children}
 
             <Footer />

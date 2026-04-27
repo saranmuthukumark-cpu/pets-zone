@@ -60,6 +60,10 @@ const veterinarySchema = new Schema(
       type: String,
       required: true,
     },
+    submittedBy: {
+      type: String,
+      default: "Admin",
+    },
   },
   {
     timestamps: true,

@@ -1,3 +1,5 @@
+import toast from "react-hot-toast";
+
 export const AddToCart = (pet) => {
   if (!pet) return;
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -19,6 +21,7 @@ export const AddToCart = (pet) => {
   }
 
   localStorage.setItem("cart", JSON.stringify(cart));
+  toast.success("added to cart");
 
   window.dispatchEvent(new Event("storage"));
 };

@@ -7,11 +7,23 @@ import { useAuth } from "@/context/AuthContext";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import toast from "react-hot-toast";
 
 const schema = z.object({
-  email: z.email("Invalid email address"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
+  email: z.string()
+    .min(1, "Email is required")
+    .email("Invalid email address")
+    .trim()
+    .toLowerCase(),
+  password: z
+    .string()
+    .regex(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/,
+      "Invalid password"
+    ),
+
 });
+
 
 export default function LoginPage() {
   const { login } = useAuth();
@@ -43,13 +55,14 @@ export default function LoginPage() {
 
       if (response.ok) {
         await login();
-        
+        toast.success("logged in successfully");
+
       } else {
-        alert(loginData.error);
+        toast.error(loginData.error);
       }
     } catch (error) {
-      console.error("Error logging in:", error);
-      alert("Failed to login user");
+
+      toast.error("Failed to login");
     }
   };
 
@@ -112,7 +125,7 @@ export default function LoginPage() {
             Register
           </Link>
         </p>
-      
+
       </div>
     </div>
   );

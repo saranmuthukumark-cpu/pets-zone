@@ -200,7 +200,7 @@ export default function AdminDashboard() {
                   <input
                     type="text"
                     name="animal"
-                    placeholder="e.g. Cow, Goat, Pig"
+                    placeholder="e.g. Cow, Goat"
                     className="w-full p-3 border rounded-lg outline-0"
                     required
                   />
@@ -281,9 +281,12 @@ export default function AdminDashboard() {
                   <input
                     type="tel"
                     name="owner.phone"
-                    placeholder="e.g. 9876543210"
+                    placeholder="e.g. 6379745455"
                     className="w-full p-3 border rounded-lg outline-0"
                     required
+                    onInput={(e) =>
+                      (e.target.value = e.target.value.replace(/[^0-9]/g, ""))
+                    }
                   />
                 </div>
                 <div>
@@ -291,7 +294,7 @@ export default function AdminDashboard() {
                   <input
                     type="email"
                     name="owner.email"
-                    placeholder="e.g. ramesh@gmail.com"
+                    placeholder="e.g. saran@gmail.com"
                     className="w-full p-3 border rounded-lg outline-0"
                     required
                   />
@@ -393,7 +396,7 @@ export default function AdminDashboard() {
                   <input
                     type="text"
                     name="name"
-                    placeholder="e.g. Premium Dog Food"
+                    placeholder="e.g. Dog Food Name"
                     className="w-full p-3 border rounded-lg outline-0"
                     required
                   />
@@ -457,7 +460,7 @@ export default function AdminDashboard() {
                   <input
                     type="text"
                     name="location"
-                    placeholder="e.g. Chennai"
+                    placeholder="e.g. Erode"
                     className="w-full p-3 border rounded-lg outline-0"
                     required
                   />
@@ -482,7 +485,7 @@ export default function AdminDashboard() {
                   <input
                     type="text"
                     name="name"
-                    placeholder="e.g. Dr. Ramesh Kumar"
+                    placeholder="e.g. Dr. Saran"
                     className="w-full p-3 border rounded-lg outline-0"
                     required
                   />
@@ -492,7 +495,7 @@ export default function AdminDashboard() {
                   <input
                     type="text"
                     name="specialization"
-                    placeholder="e.g. Large Animals"
+                    placeholder="e.g. Bones"
                     className="w-full p-3 border rounded-lg outline-0"
                     required
                   />
@@ -514,7 +517,7 @@ export default function AdminDashboard() {
                   <input
                     type="text"
                     name="location"
-                    placeholder="e.g. Chennai"
+                    placeholder="e.g. Erode"
                     className="w-full p-3 border rounded-lg outline-0"
                     required
                   />
@@ -524,7 +527,7 @@ export default function AdminDashboard() {
                   <input
                     type="text"
                     name="clinic"
-                    placeholder="e.g. RK Veterinary Clinic"
+                    placeholder="e.g. Saran Clinic"
                     className="w-full p-3 border rounded-lg outline-0"
                     required
                   />
@@ -534,9 +537,12 @@ export default function AdminDashboard() {
                   <input
                     type="tel"
                     name="phone"
-                    placeholder="e.g. 9876543210"
+                    placeholder="e.g. 6379745455"
                     className="w-full p-3 border rounded-lg outline-0"
                     required
+                    onInput={(e) =>
+                      (e.target.value = e.target.value.replace(/[^0-9]/g, ""))
+                    }
                   />
                 </div>
                 <div>
@@ -544,7 +550,7 @@ export default function AdminDashboard() {
                   <input
                     type="email"
                     name="email"
-                    placeholder="e.g. rameshvet@gmail.com"
+                    placeholder="e.g. saran@gmail.com"
                     className="w-full p-3 border rounded-lg outline-0"
                     required
                   />

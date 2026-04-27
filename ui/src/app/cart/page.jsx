@@ -4,6 +4,7 @@ import { useEffect, useState, useContext } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { AuthContext } from "@/context/AuthContext";
+import toast from "react-hot-toast";
 
 export default function CartPage() {
   const [cart, setCart] = useState([]);
@@ -42,7 +43,7 @@ export default function CartPage() {
 
   const remove = (id) => {
     updateCart(cart.filter((pet) => pet._id !== id));
-    alert("Removed! from Family");
+    toast.error("Removed from Family");
   };
 
   const subtotal = cart.reduce((num, pet) => num + pet.price * pet.quantity, 0);

@@ -12,8 +12,7 @@ function OrderDetails() {
   const [loading, setLoading] = useState(true);
 
   const subtotal =
-    order?.items?.reduce((sum, item) => sum + item.price * item.quantity, 0) ||
-    0;
+    order?.items?.reduce((sum, item) => sum + (Number(item.price) || 0) * (Number(item.quantity) || 0), 0) || 0;
   const actualTax = subtotal * 0.05;
 
   useEffect(() => {
@@ -46,7 +45,7 @@ function OrderDetails() {
     <div className="bg-[#fff2ee] p-8 rounded-2xl shadow-md  border-[#7f5539] max-w-3xl mx-auto mt-10">
       <div className="flex justify-center items-center mb-8 border-b pb-4">
         <h2 className="text-3xl text-[#7f5539] font-bold ">Order Details</h2>
-        
+
       </div>
 
       <div className="grid grid-cols-1  gap-6 text-lg text-gray-700 mb-8 border-b pb-8">
@@ -73,7 +72,10 @@ function OrderDetails() {
           <p className="mb-2">
             <strong className="text-[#7f5539]">Date:</strong>{" "}
             {order.createdAt
-              ? new Date(order.createdAt).toLocaleDateString()
+              ? new Date(order.createdAt).toLocaleString('en-IN', {
+                dateStyle: 'medium',
+                timeStyle: 'short'
+              })
               : "Unknown"}
           </p>
         </div>
@@ -116,7 +118,7 @@ function OrderDetails() {
       <div className="flex flex-col md:flex-row justify-between items-center border-t pt-6 gap-4">
         <Link href="/admin/admin-orders">
           <button className="bg-[#7f5539] text-white px-8 py-3 rounded-md font-semibold  w-full md:w-auto">
-            <CircleArrowLeft/> 
+            <CircleArrowLeft />
           </button>
         </Link>
         <p className="font-bold text-xl text-[#7f5539]">

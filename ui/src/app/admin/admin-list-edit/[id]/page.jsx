@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { useData } from "@/context/LivestockContext";
+import toast from "react-hot-toast";
 export default function AdminEditDashboard() {
   const params = useParams();
   const searchParams = useSearchParams();
@@ -124,7 +125,7 @@ export default function AdminEditDashboard() {
       );
 
       if (response.ok) {
-        alert("Updated successfully!");
+        toast.success("Updated successfully");
         router.push("/admin/admin-list");
       } else {
         const errorData = await response.json().catch(() => ({}));
@@ -196,7 +197,7 @@ export default function AdminEditDashboard() {
             </h1>
             <button
               onClick={() => router.push("/admin/admin-list")}
-              className="px-4 py-2 bg-gray-300 rounded-md hover:bg-gray-400 font-medium">
+              className="px-4 py-2 bg-gray-300 rounded-md scale-105 font-medium">
               Cancel
             </button>
           </div>

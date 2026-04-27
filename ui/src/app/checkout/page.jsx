@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 export default function CheckoutPage() {
   const [cart, setCart] = useState([]);
@@ -29,13 +30,16 @@ export default function CheckoutPage() {
   const total = subtotal + tax;
 
   const handleOrder = async () => {
-    if (!form.name || !form.phone || !form.address || !form.city) {
-      alert("Please fill all details");
+    if (!form.name.trim() || !form.phone.trim() || !form.address.trim() || !form.city.trim()) {
+      toast.error("Please fill all details");
       return;
     }
-
+    if (form.phone.trim().length < 10 || isNaN(form.phone.trim())) {
+      toast.error("enter a valid phone number");
+      return;
+    }
     if (cart.length === 0) {
-      alert("Your cart is empty!");
+      toast.error("Your cart is empty!");
       return;
     }
 
@@ -59,11 +63,11 @@ export default function CheckoutPage() {
       if (response.ok) {
         localStorage.removeItem("cart");
         setCart([]);
-
-        alert("Order placed successfully!");
+        window.dispatchEvent(new Event("storage"));
+        toast.success("Order placed successfully");
         router.push("/");
       } else {
-        alert("Failed to place order. Please try again.");
+        toast.error("Failed to place order. Please try again.");
       }
     } catch (error) {
       console.error("Order error:", error);
@@ -145,7 +149,7 @@ export default function CheckoutPage() {
           <button
             onClick={handleOrder}
             className="mt-6 w-full bg-[#7f5539] text-white py-3 rounded-full font-medium hover:opacity-90 transition">
-            Claim My Buddy
+            Claim
           </button>
         </div>
       </div>

@@ -6,11 +6,22 @@ import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import toast from "react-hot-toast";
 
 const schema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.email("Invalid email address"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
+  name: z.string().min(2, "Name must be at least 2 characters").trim(),
+  email: z
+    .string()
+    .min(1, "Email is required")
+    .email("Invalid email address")
+    .trim()
+    .toLowerCase(),
+  password: z
+    .string()
+    .regex(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/,
+      "Invalid password",
+    ),
 });
 
 export default function RegisterPage() {
@@ -47,14 +58,14 @@ export default function RegisterPage() {
       const registerData = await response.json();
 
       if (response.ok) {
-        alert(registerData.message);
+
+        toast.success(registerData.message || "Registered successfully!")
         router.push("/login");
       } else {
-        alert(registerData.error);
+       toast.error(registerData.error);
       }
     } catch (error) {
-      console.error("Error registering:", error);
-      alert("Failed to register user");
+      toast.error("Failed to register user");
     }
   };
 
