@@ -128,8 +128,6 @@ export default function AdminDashboard() {
               <p className="text-sm">Total Orders</p>
               <p className="text-3xl font-bold mt-2">{orders.length}</p>
             </div>
-
-            
           </div>
         </div>
 
@@ -146,7 +144,7 @@ export default function AdminDashboard() {
           {orders.length > 0 ? (
             <table className="w-full">
               <thead>
-                <tr className="text-left text-sm text-gray-500">
+                <tr className="text-left text-sm text-[#7f5539]">
                   <th className="p-2">Customer</th>
                   <th className="p-2">City</th>
                   <th className="p-2">Amount</th>

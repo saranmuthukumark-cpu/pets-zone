@@ -10,20 +10,20 @@ import * as z from "zod";
 import toast from "react-hot-toast";
 
 const schema = z.object({
-  email: z.string()
+  email: z
+    .string()
     .min(1, "Email is required")
     .email("Invalid email address")
     .trim()
-    .toLowerCase(),
+    .toLowerCase()
+    .regex(/^[a-z0-9._%+-]+@gmail\.com$/, "Invalid email address"),
   password: z
     .string()
     .regex(
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/,
-      "Invalid password"
+      "Password must be 8 characters mixed",
     ),
-
 });
-
 
 export default function LoginPage() {
   const { login } = useAuth();
@@ -56,12 +56,10 @@ export default function LoginPage() {
       if (response.ok) {
         await login();
         toast.success("logged in successfully");
-
       } else {
         toast.error(loginData.error);
       }
     } catch (error) {
-
       toast.error("Failed to login");
     }
   };
@@ -125,7 +123,6 @@ export default function LoginPage() {
             Register
           </Link>
         </p>
-
       </div>
     </div>
   );

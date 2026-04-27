@@ -25,7 +25,7 @@ const schema = z.object({
     .string()
     .regex(
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/,
-      "Invalid password",
+      "Password must be 8 characters mixed",
     ),
 });
 

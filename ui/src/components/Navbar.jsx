@@ -127,6 +127,12 @@ export default function Navbar() {
             </Link>
           ) : (
             <div className="flex items-center gap-3">
+              {" "}
+              <Link
+                href={"/my-orders"}
+                className={`text-sm hidden md:block mr-2  ${pathname.startsWith("/my-orders") ? "text-[#7f5539]" : "text-black hover:text-[#7f5539]"}`}>
+                My Orders
+              </Link>
               <span className="text-sm font-medium hidden md:block text-[#7f5539]">
                 {user.name || "User"}
               </span>
@@ -166,6 +172,11 @@ export default function Navbar() {
           <Link href={"/supplies"}>Pet Supplies</Link>
           <Link href={"/veterinary"}>Veterinary</Link>
           <Link href={"/pharmacy"}>Pharmacy</Link>
+          {user && (
+            <Link href={"/my-orders"} className="text-[#7f5539] font-bold">
+              My Orders
+            </Link>
+          )}
         </div>
       )}
     </nav>
