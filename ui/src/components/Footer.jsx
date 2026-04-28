@@ -33,7 +33,7 @@ export default function Footer() {
               <Link href={"/marketplace"}>Marketplace</Link>
             </li>
             <li className="hover:text-[#7f5539]">
-              <Link href={"/petsupplies"}>Pet Supplies</Link>
+              <Link href={"/supplies"}>Pet Supplies</Link>
             </li>
             <li className="hover:text-[#7f5539]">
               <Link href={"/veterinary"}>Veterinary</Link>
@@ -51,7 +51,7 @@ export default function Footer() {
               <Link href={"/marketplace"}>Sell on PetsKart</Link>
             </li>
             <li className="hover:text-[#7f5539]">
-              <Link href={"/petsupplies"}>Help Center</Link>
+              <Link href={"/supplies"}>Help Center</Link>
             </li>
             <li className="hover:text-[#7f5539]">
               <Link href={"/veterinary"}>Contact us</Link>
@@ -69,7 +69,7 @@ export default function Footer() {
               <Link href={"/marketplace"}>Privacy & Policy</Link>
             </li>
             <li className="hover:text-[#7f5539]">
-              <Link href={"/petsupplies"}>Blogs</Link>
+              <Link href={"/supplies"}>Blogs</Link>
             </li>
             <li className="hover:text-[#7f5539]">
               <Link href={"/veterinary"}>FAQs</Link>
