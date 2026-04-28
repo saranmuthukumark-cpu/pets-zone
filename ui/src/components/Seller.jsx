@@ -4,9 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useContext } from "react";
 import { AuthContext } from "@/context/AuthContext";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 export default function Seller() {
   const { user } = useContext(AuthContext);
+  const router = useRouter();
 
   return (
     <section className="px-4 md:px-8 py-10">
@@ -31,8 +34,11 @@ export default function Seller() {
               </Link>
             ) : (
               <button
-                disabled
-                className="bg-[#7f5539] text-white px-6 py-3 rounded-full font-medium cursor-not-allowed opacity-80">
+                onClick={() => {
+                  toast.error("you need to login");
+                  router.push("/login");
+                }}
+                className="bg-[#7f5539] text-white px-6 py-3 rounded-full font-medium hover:opacity-90">
                 START SELLING
               </button>
             )}

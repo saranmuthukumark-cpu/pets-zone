@@ -79,7 +79,7 @@ export const deleteListing = async (req, res) => {
   try {
     const deleted = await Model.findByIdAndDelete(req.params.id);
     if (!deleted) return res.status(404).json({ error: "Item not found" });
-    res.json({ message: "Deleted successfully" });
+    res.json({ message: "eleted successfully" });
   } catch (error) {
     res.status(500).json({ error: "Failed to delete" });
   }

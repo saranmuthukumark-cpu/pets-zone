@@ -13,17 +13,11 @@ export default function MyOrders() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await fetch("/api/orders");
+        const response = await fetch("/api/orders/my", {
+          credentials: "include",
+        });
         const result = await response.json();
-
-        if (user && user.name) {
-          const accountName = user.name.trim().toLowerCase();
-          const userOrders = result.filter(
-            (order) =>
-              order.name && order.name.trim().toLowerCase() === accountName,
-          );
-          setDbOrders(userOrders);
-        }
+        setDbOrders(Array.isArray(result) ? result : []);
         setLoading(false);
       } catch (error) {
         console.error("Failed to fetch orders:", error);

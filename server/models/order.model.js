@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 
 const orderSchema = new mongoose.Schema(
   {
+    userId: { type: String, default: null },
     name: { type: String, required: true },
     phone: { type: String, required: true },
     address: { type: String, required: true },

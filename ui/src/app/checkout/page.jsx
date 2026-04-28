@@ -34,8 +34,15 @@ export default function CheckoutPage() {
       toast.error("Please fill all details");
       return;
     }
-    if (form.phone.trim().length < 10 || isNaN(form.phone.trim())) {
-      toast.error("enter a valid phone number");
+
+    if (form.address.trim().length < 10) {
+      toast.error("Please enter a complete address (minimum 10 characters)");
+      return;
+    }
+
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(form.phone.trim())) {
+      toast.error("Please enter a valid 10-digit mobile number");
       return;
     }
     if (cart.length === 0) {
@@ -57,6 +64,7 @@ export default function CheckoutPage() {
       const response = await fetch("/api/orders", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        credentials: "include",
         body: JSON.stringify(orderData),
       });
 
@@ -95,8 +103,13 @@ export default function CheckoutPage() {
               <input
                 type="text"
                 placeholder="Phone Number *"
+                maxLength={10}
+                value={form.phone}
                 className="w-full p-3 border rounded-lg outline-0"
-                onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                onChange={(e) => {
+                  const val = e.target.value.replace(/\D/g, ""); // strip non-digits
+                  setForm({ ...form, phone: val });
+                }}
               />
 
               <textarea

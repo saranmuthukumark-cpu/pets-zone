@@ -145,14 +145,14 @@ export default function CartPage() {
               if (user) {
                 router.push("/checkout");
               } else {
-                alert("login to proceed to checkout");
+                toast.error("you need to login");
+                router.push("/login");
               }
             }}
-            disabled={!user}
             className={`mt-6 w-full py-3 rounded-full font-medium ${
               user
                 ? "bg-[#7f5539] text-white hover:bg-[#6c4830] cursor-pointer"
-                : "bg-[#7f5539] text-white opacity-70 cursor-not-allowed"
+                : "bg-[#7f5539] text-white hover:bg-[#6c4830] cursor-pointer"
             }`}>
             {user ? "Bring Me Home" : "Login to Checkout"}
           </button>
