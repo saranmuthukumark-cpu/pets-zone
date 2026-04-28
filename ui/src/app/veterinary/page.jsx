@@ -35,7 +35,7 @@ export default function VeterinaryPage() {
           <div>
             <p className="font-medium mb-1">Location</p>
             <select
-              className="w-full p-2 rounded-md bg-white"
+              className="w-full p-2 rounded-md bg-white outline-0"
               value={location}
               onChange={(e) => setLocation(e.target.value)}>
               <option value="">All</option>
@@ -52,7 +52,7 @@ export default function VeterinaryPage() {
             <input
               type="number"
               placeholder="₹"
-              className="w-full p-2 rounded-md bg-white"
+              className="w-full p-2 rounded-md bg-white outline-0"
               value={maxFees}
               onChange={(e) => setMaxFees(e.target.value)}
             />

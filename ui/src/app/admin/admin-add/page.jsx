@@ -71,7 +71,7 @@ export default function AdminDashboard() {
             <Link
               href={"/admin/admin-approvals"}
               className="w-full bg-white py-2 rounded-md flex items-center gap-2 px-3">
-              Approvals
+              Submissions
             </Link>
             <Link
               href={"/admin/admin-list"}

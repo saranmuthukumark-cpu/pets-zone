@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useData } from "@/context/LivestockContext";
+import toast from "react-hot-toast";
 
 export default function AdminListings() {
   const [users, setUsers] = useState(0);
@@ -59,14 +60,10 @@ export default function AdminListings() {
     if (!confirmDelete) return;
 
     try {
-      const response = await fetch(
-        `/api/adminlist/${categoryType}/${id}`
-        ,
-        {
-          method: "DELETE",
-          credentials: "include",
-        },
-      );
+      const response = await fetch(`/api/adminlist/${categoryType}/${id}`, {
+        method: "DELETE",
+        credentials: "include",
+      });
 
       if (response.ok) {
         if (categoryType === "pets")
@@ -80,9 +77,9 @@ export default function AdminListings() {
         else if (categoryType === "veterinary")
           setVeterinary(veterinary.filter((item) => item._id !== id));
 
-        alert("deleted successfully!");
+        toast.error("deleted successfully");
       } else {
-        alert("Failed to delete listing.");
+        toast.error("Failed to delete listing");
       }
     } catch (error) {
       console.error("Error", error);
@@ -93,15 +90,12 @@ export default function AdminListings() {
   const handleAddListing = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(
-        `/api/${newItem.categoryType}`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          credentials: "include",
-          body: JSON.stringify(newItem),
-        },
-      );
+      const response = await fetch(`/api/${newItem.categoryType}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify(newItem),
+      });
 
       if (response.ok) {
         const result = await response.json();
@@ -207,7 +201,7 @@ export default function AdminListings() {
         </div>
 
         <div className="flex-1">
-          <h1 className="text-2xl font-bold mb-6">All Database Listings</h1>
+          <h1 className="text-2xl font-bold mb-6">All DB Listings</h1>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {allListings.length > 0 ? (
@@ -250,16 +244,15 @@ export default function AdminListings() {
                         ? typeof item.location === "object" &&
                           item.location !== null
                           ? `${item.location.village || ""}, ${item.location.district || ""}`.replace(
-                            /(^, )|(, $)/g,
-                            "",
-                          )
+                              /(^, )|(, $)/g,
+                              "",
+                            )
                           : item.location
                         : "No location specified"}
                     </p>
 
                     <p className="text-lg font-bold mt-2">
                       ₹{item.price || item.price_inr || item.fees || "no cost"}
-
                     </p>
 
                     <div className="flex gap-2 mt-4">

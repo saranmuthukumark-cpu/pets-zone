@@ -28,15 +28,12 @@ export default function AdminOrders() {
   const toggleStatus = async (id, currentStatus) => {
     const newStatus = currentStatus === "Completed" ? "Pending" : "Completed";
     try {
-      const response = await fetch(
-        `/api/orders/${id}/status`,
-        {
-          method: "PUT",
-          headers: { "Content-Type": "application/json" },
-          credentials: "include",
-          body: JSON.stringify({ status: newStatus }),
-        },
-      );
+      const response = await fetch(`/api/orders/${id}/status`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({ status: newStatus }),
+      });
       if (response.ok) {
         setDbOrders(
           dbOrders.map((order) =>
@@ -178,9 +175,7 @@ export default function AdminOrders() {
               </div>
             ))
           ) : (
-            <div className="p-8 text-center text-gray-500">
-              No orders placed yet.
-            </div>
+            <div className="p-8 text-center text-gray-500">No orders</div>
           )}
         </div>
       </main>

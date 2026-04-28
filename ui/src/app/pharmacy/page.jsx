@@ -34,7 +34,7 @@ export default function PharmacyPage() {
           <div>
             <p className="font-medium mb-1">Category</p>
             <select
-              className="w-full p-2 rounded-md bg-white"
+              className="w-full p-2 rounded-md bg-white outline-0"
               value={category}
               onChange={(e) => setCategory(e.target.value)}>
               <option value="">All</option>
@@ -51,7 +51,7 @@ export default function PharmacyPage() {
             <input
               type="number"
               placeholder="Enter price"
-              className="w-full p-2 rounded-md bg-white"
+              className="w-full p-2 rounded-md bg-white outline-0"
               value={maxPrice}
               onChange={(e) => setMaxPrice(e.target.value)}
             />
