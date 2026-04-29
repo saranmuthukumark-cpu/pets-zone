@@ -142,6 +142,10 @@ export default function CartPage() {
 
           <button
             onClick={() => {
+              if (cart.length === 0) {
+                toast.error("Your cart is empty!");
+                return;
+              }
               if (user) {
                 router.push("/checkout");
               } else {
