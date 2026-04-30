@@ -50,7 +50,7 @@ export default function SellPetPage() {
       });
 
       if (response.ok) {
-        alert("It has Added");
+        toast.success("It has Submitted");
         router.push("/");
       } else {
         const err = await response.json().catch(() => ({}));
@@ -223,7 +223,6 @@ export default function SellPetPage() {
               <label className="pb-3 font-medium">District:</label>
               <input
                 type="text"
-
                 name="location.district"
                 placeholder="e.g. Erode"
                 className="w-full p-3 border rounded-lg outline-0"
