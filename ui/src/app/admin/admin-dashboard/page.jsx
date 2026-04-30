@@ -10,6 +10,9 @@ import {
   Pill,
   Stethoscope,
   TrendingUp,
+  LayoutDashboard,
+  Users,
+  ChartBarBig,
 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -72,19 +75,19 @@ export default function AdminDashboard() {
             <Link
               href={"/admin/admin-dashboard"}
               className="w-full bg-[#7f5539]  text-white py-2  flex  items-center px-3 rounded-md">
-              Dashboard
+              <LayoutDashboard size={16}  />  Dashboard
             </Link>
 
             <Link
               href={"/admin/admin-usermanagement"}
               className="w-full bg-white py-2 rounded-md flex items-center gap-2 px-3">
-              User Management
+            <Users size={16} />  User Management
             </Link>
 
             <Link
               href={"/admin/admin-approvals"}
               className="w-full bg-white py-2 rounded-md flex items-center gap-2 px-3">
-              Submissions
+              <ChartBarBig  size={16}/> Submissions
             </Link>
             <Link
               href={"/admin/admin-list"}
