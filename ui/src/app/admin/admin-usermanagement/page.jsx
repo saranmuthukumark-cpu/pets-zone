@@ -70,14 +70,14 @@ export default function AdminDashboard() {
           <div className="space-y-3">
             <Link
               href={"/admin/admin-dashboard"}
-              className="w-full bg-white  py-2  flex  items-center px-3 rounded-md">
-              <LayoutDashboard size={16}  />  Dashboard
+              className="w-full bg-white  py-2  gap-2 flex  items-center px-3 rounded-md">
+              <LayoutDashboard size={16} />    Dashboard
             </Link>
 
             <Link
               href={"/admin/admin-usermanagement"}
               className="w-full bg-[#7f5539] text-white py-2 rounded-md flex items-center gap-2 px-3">
-              <Users size={16} />User Management
+              <Users size={16} /> User Management
             </Link>
 
             <Link

@@ -60,8 +60,8 @@ export default function AdminOrders() {
           <div className="space-y-3">
             <Link
               href={"/admin/admin-dashboard"}
-              className="w-full bg-white py-2 flex items-center px-3 rounded-md">
-                <LayoutDashboard size={16}  />Dashboard
+              className="w-full bg-white py-2  gap-2 flex items-center px-3 rounded-md">
+                <LayoutDashboard size={16}  /> Dashboard
             </Link>
             <Link
               href={"/admin/admin-usermanagement"}
