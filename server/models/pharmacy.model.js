@@ -28,7 +28,6 @@ const pharmacySchema = new Schema(
 
     stock: {
       type: Number,
-      required: true,
       min: 0,
     },
 

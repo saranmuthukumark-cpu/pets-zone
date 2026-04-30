@@ -357,16 +357,6 @@ export default function AdminDashboard() {
                   />
                 </div>
                 <div>
-                  <label className="pb-3 font-medium">Stock:</label>
-                  <input
-                    type="number"
-                    name="stock"
-                    placeholder="e.g. 20"
-                    className="w-full p-3 border rounded-lg outline-0"
-                    required
-                  />
-                </div>
-                <div>
                   <label className="pb-3 font-medium">Location:</label>
                   <input
                     type="text"
@@ -441,16 +431,6 @@ export default function AdminDashboard() {
                     type="number"
                     name="oldPrice"
                     placeholder="e.g. 1500"
-                    className="w-full p-3 border rounded-lg outline-0"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="pb-3 font-medium">Stock:</label>
-                  <input
-                    type="number"
-                    name="stock"
-                    placeholder="e.g. 25"
                     className="w-full p-3 border rounded-lg outline-0"
                     required
                   />

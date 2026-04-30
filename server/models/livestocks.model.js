@@ -4,7 +4,6 @@ const livestockSchema = new Schema(
   {
     id: {
       type: Number,
-      required: true,
     },
 
     animal: {
@@ -76,7 +75,7 @@ const livestockSchema = new Schema(
     details: {
       type: String,
       required: true,
-    }, 
+    },
     submittedBy: {
       type: String,
       default: "Admin",

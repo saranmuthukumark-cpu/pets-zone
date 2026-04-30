@@ -28,20 +28,40 @@ function getModel(category) {
   return map[category] || null;
 }
 
+
+function parseDotNotation(flat) {
+  const result = {};
+  for (const key of Object.keys(flat)) {
+    const parts = key.split(".");
+    let obj = result;
+    for (let i = 0; i < parts.length - 1; i++) {
+      if (!obj[parts[i]] || typeof obj[parts[i]] !== "object") {
+        obj[parts[i]] = {};
+      }
+      obj = obj[parts[i]];
+    }
+    obj[parts[parts.length - 1]] = flat[key];
+  }
+  return result;
+}
+
 // create
 export const createListing = async (req, res) => {
   const Model = getModel(req.params.category);
   if (!Model) return res.status(400).json({ error: "Invalid category" });
   try {
-    const data = { ...req.body };
+    const data = parseDotNotation({ ...req.body });
     if (req.file) data.image = "/uploads/" + req.file.filename;
 
     const token = req.headers.cookie?.split("token=")[1]?.split(";")[0];
     if (token) {
-      const decoded = jwt.verify(token, process.env.JWT_SECRET);
-      const user = await User.findById(decoded.id);
-      if (user && user.role !== "admin") {
-        data.submittedBy = user.name;
+      try {
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const user = await User.findById(decoded.id);
+        if (user && user.role !== "admin") {
+          data.submittedBy = user.name;
+        }
+      } catch (_) {
       }
     }
     const newItem = new Model(data);
