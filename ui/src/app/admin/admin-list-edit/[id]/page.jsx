@@ -219,7 +219,7 @@ export default function AdminEditDashboard() {
               <input
                 type="text"
                 name="family"
-                placeholder="family"
+                placeholder="e.g. golden retriever"
                 value={formData.family}
                 onChange={handleChange}
                 className="w-full p-3 border rounded-lg outline-0"
@@ -231,7 +231,7 @@ export default function AdminEditDashboard() {
               <input
                 type="text"
                 name="gender"
-                placeholder="gender"
+                placeholder="e.g. male"
                 value={formData.gender}
                 onChange={handleChange}
                 className="w-full p-3 border rounded-lg outline-0"
@@ -256,7 +256,7 @@ export default function AdminEditDashboard() {
               <input
                 type="tel"
                 name="phone"
-                placeholder="phone"
+                placeholder="e.g. 6379745455"
                 value={formData.phone}
                 onChange={handleChange}
                 className="w-full p-3 border rounded-lg outline-0"
@@ -268,7 +268,8 @@ export default function AdminEditDashboard() {
               <input
                 type="number"
                 name="price"
-                placeholder="price"
+                min="0"
+                placeholder="e.g. 5000"
                 value={formData.price}
                 onChange={handleChange}
                 className="w-full p-3 border rounded-lg outline-0"

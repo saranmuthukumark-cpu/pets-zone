@@ -133,6 +133,7 @@ export default function SellPetPage() {
               <label className="pb-3 font-medium">Old Price ₹:</label>
               <input
                 type="number"
+                min="0"
                 name="oldPrice"
                 placeholder="e.g. 30000"
                 className="w-full p-3 border rounded-lg outline-0"
@@ -143,6 +144,7 @@ export default function SellPetPage() {
               <label className="pb-3 font-medium">Price ₹:</label>
               <input
                 type="number"
+                min="0"
                 name="price"
                 placeholder="e.g. 25000"
                 className="w-full p-3 border rounded-lg outline-0"
@@ -189,6 +191,7 @@ export default function SellPetPage() {
               <label className="pb-3 font-medium">Age:</label>
               <input
                 type="number"
+                min="0"
                 name="age"
                 placeholder="e.g. 4"
                 className="w-full p-3 border rounded-lg outline-0"
@@ -199,6 +202,7 @@ export default function SellPetPage() {
               <label className="pb-3 font-medium">Price ₹:</label>
               <input
                 type="number"
+                min="0"
                 name="price_inr"
                 placeholder="e.g. 65000"
                 className="w-full p-3 border rounded-lg outline-0"
@@ -219,6 +223,7 @@ export default function SellPetPage() {
               <label className="pb-3 font-medium">District:</label>
               <input
                 type="text"
+
                 name="location.district"
                 placeholder="e.g. Erode"
                 className="w-full p-3 border rounded-lg outline-0"
@@ -322,6 +327,7 @@ export default function SellPetPage() {
               <label className="pb-3 font-medium">Price ₹:</label>
               <input
                 type="number"
+                min="0"
                 name="price"
                 placeholder="e.g. 350"
                 className="w-full p-3 border rounded-lg outline-0"
@@ -391,6 +397,7 @@ export default function SellPetPage() {
               <label className="pb-3 font-medium">Price ₹:</label>
               <input
                 type="number"
+                min="0"
                 name="price"
                 placeholder="e.g. 1200"
                 className="w-full p-3 border rounded-lg outline-0"
@@ -401,6 +408,7 @@ export default function SellPetPage() {
               <label className="pb-3 font-medium">Old Price ₹:</label>
               <input
                 type="number"
+                min="0"
                 name="oldPrice"
                 placeholder="e.g. 1500"
                 className="w-full p-3 border rounded-lg outline-0"
@@ -456,6 +464,7 @@ export default function SellPetPage() {
               <label className="pb-3 font-medium">Experience (years):</label>
               <input
                 type="number"
+                min="0"
                 name="experience"
                 placeholder="e.g. 12"
                 className="w-full p-3 border rounded-lg outline-0"
@@ -512,6 +521,7 @@ export default function SellPetPage() {
               <label className="pb-3 font-medium">Fees ₹:</label>
               <input
                 type="number"
+                min="0"
                 name="fees"
                 placeholder="e.g. 500"
                 className="w-full p-3 border rounded-lg outline-0"

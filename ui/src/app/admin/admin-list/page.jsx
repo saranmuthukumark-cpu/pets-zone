@@ -56,7 +56,7 @@ export default function AdminListings() {
   ];
 
   const handleDelete = async (id, categoryType) => {
-    const confirmDelete = window.confirm(`delete from listing ?`);
+    const confirmDelete = window.confirm("Are you sure you want to delete this listing?");
     if (!confirmDelete) return;
 
     try {
@@ -77,13 +77,13 @@ export default function AdminListings() {
         else if (categoryType === "veterinary")
           setVeterinary(veterinary.filter((item) => item._id !== id));
 
-        toast.error("deleted successfully");
+        toast.success("Deleted successfully");
       } else {
-        toast.error("Failed to delete listing");
+        toast.error("Failed to delete listing.");
       }
     } catch (error) {
       console.error("Error", error);
-      alert(" error occurred");
+      toast.error("error occured");
     }
   };
 

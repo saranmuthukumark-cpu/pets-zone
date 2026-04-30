@@ -145,6 +145,7 @@ export default function AdminDashboard() {
                   <input
                     type="text"
                     name="age"
+                    min="0"
                     placeholder="e.g. 2 years"
                     className="w-full p-3 border rounded-lg outline-0"
                     required
@@ -165,6 +166,7 @@ export default function AdminDashboard() {
                   <input
                     type="number"
                     name="oldPrice"
+                    min="0"
                     placeholder="e.g. 30000"
                     className="w-full p-3 border rounded-lg outline-0"
                     required
@@ -175,6 +177,7 @@ export default function AdminDashboard() {
                   <input
                     type="number"
                     name="price"
+                    min="0"
                     placeholder="e.g. 25000"
                     className="w-full p-3 border rounded-lg outline-0"
                     required
@@ -221,6 +224,7 @@ export default function AdminDashboard() {
                   <input
                     type="number"
                     name="age"
+                    min="0"
                     placeholder="e.g. 4"
                     className="w-full p-3 border rounded-lg outline-0"
                     required
@@ -230,6 +234,7 @@ export default function AdminDashboard() {
                   <label className="pb-3 font-medium">Price ₹:</label>
                   <input
                     type="number"
+                    min="0"
                     name="price_inr"
                     placeholder="e.g. 65000"
                     className="w-full p-3 border rounded-lg outline-0"
@@ -350,6 +355,7 @@ export default function AdminDashboard() {
                   <label className="pb-3 font-medium">Price ₹:</label>
                   <input
                     type="number"
+                    min="0"
                     name="price"
                     placeholder="e.g. 350"
                     className="w-full p-3 border rounded-lg outline-0"
@@ -419,6 +425,7 @@ export default function AdminDashboard() {
                   <label className="pb-3 font-medium">Price ₹:</label>
                   <input
                     type="number"
+                    min="0"
                     name="price"
                     placeholder="e.g. 1200"
                     className="w-full p-3 border rounded-lg outline-0"
@@ -429,6 +436,7 @@ export default function AdminDashboard() {
                   <label className="pb-3 font-medium">Old Price ₹:</label>
                   <input
                     type="number"
+                    min="0"
                     name="oldPrice"
                     placeholder="e.g. 1500"
                     className="w-full p-3 border rounded-lg outline-0"
@@ -486,6 +494,7 @@ export default function AdminDashboard() {
                   </label>
                   <input
                     type="number"
+                    min="0"
                     name="experience"
                     placeholder="e.g. 12"
                     className="w-full p-3 border rounded-lg outline-0"
@@ -539,6 +548,7 @@ export default function AdminDashboard() {
                   <label className="pb-3 font-medium">Fees ₹:</label>
                   <input
                     type="number"
+                    min="0"
                     name="fees"
                     placeholder="e.g. 500"
                     className="w-full p-3 border rounded-lg outline-0"
