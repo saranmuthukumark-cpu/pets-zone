@@ -12,7 +12,7 @@ export default function PetsPage() {
   useEffect(() => {
     async function petPage() {
       const { data } = await supabase.from("pets_zone").select();
-      setPetsZone(data);
+      setPetsZone(data ?? []);
     }
     petPage();
   }, []);

@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       className="h-screen bg-cover bg-center "
-      style={{ backgroundImage: "url('/public/assets/slide1.jpg')" }}>
+      style={{ backgroundImage: "url('/assets/slide1.jpg')" }}>
       <div className="h-full w-full bg-white/20 flex items-center justify-center text-center">
         <div>
           <h1 className="text-7xl font-bold text-black/80 mb-4">
