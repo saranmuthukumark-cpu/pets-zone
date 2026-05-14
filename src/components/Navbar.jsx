@@ -13,7 +13,7 @@ export default function Navbar() {
         <div>
           <NavLink to="/">
             <img
-              src="/public/assets/pets-lo.png"
+              src="/assets/pets-lo.png"
               alt="logo"
               className="h-15 pt-1"
             />
