@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
-import Cart from "./components/cart/cart";
+import Cart from "./components/cart/Cart";
 import PetsProvider from "./components/context/PetsContext";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
