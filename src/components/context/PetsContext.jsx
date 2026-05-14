@@ -199,6 +199,10 @@ export default function PetsProvider({ children }) {
   ];
 
   const [cartNav, setCartNav] = useState(0);
+
+
+
+  
   const [cart, setCart] = useState([]);
 
   const addCart = (pet) => {

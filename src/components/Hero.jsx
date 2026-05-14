@@ -1,5 +1,6 @@
 import Footer from "./Footer";
 import PetsPage from "./PetsPage";
+import {Link} from "react-router"
 
 export default function Hero() {
   return (
@@ -16,9 +17,9 @@ export default function Hero() {
             Discover dogs, cats, birds, fishes and more.
           </p>
 
-          <button className="bg-[#69462e] text-white px-6 py-3 rounded-lg hover:bg-[#523523]">
+          <Link to="/petspage"  className="bg-[#69462e] text-white px-6 py-3 rounded-lg hover:bg-[#523523]">
             Explore Pets
-          </button>
+          </Link>
         </div>
       </div>
       <PetsPage />

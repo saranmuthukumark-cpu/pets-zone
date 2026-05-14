@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { PiShoppingCartFill } from "react-icons/pi";
 import { PetsContext } from "./context/PetsApi";
 import { NavLink } from "react-router-dom";
+import { FaRegUserCircle } from "react-icons/fa";
 
 export default function Navbar() {
   const { pets, cartNav, setCartNav, cart } = useContext(PetsContext);
@@ -74,13 +75,20 @@ export default function Navbar() {
               )}
             </NavLink>
           </div>
+          <div className="relative cursor-pointer text-3xl text-[#7f5539ff] w-fit">
+            <NavLink>
+              <FaRegUserCircle />
+            </NavLink>
+          </div>
           <button className=" bg-[#7f5539ff] text-white px-5 py-2 rounded-lg hover:bg-[#69462e]">
             Sell Your Pet
           </button>
 
-          <button className=" bg-[#7f5539ff] text-white px-5 py-2 rounded-lg hover:bg-[#69462e]">
-            Sign In
-          </button>
+          <NavLink
+            to="/addpetform"
+            className=" bg-[#7f5539ff] text-white px-5 py-2 rounded-lg hover:bg-[#69462e]">
+            Add New Pet
+          </NavLink>
         </div>
       </div>
     </>
